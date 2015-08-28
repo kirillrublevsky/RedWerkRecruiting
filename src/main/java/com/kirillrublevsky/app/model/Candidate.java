@@ -27,7 +27,16 @@ public class Candidate implements Serializable {
     @Column(name = "skills")
     private String skills;
 
-    public Candidate() {}
+    public Candidate() {
+    }
+
+    public Candidate(String firstName, String lastName, String additionDate, String interviewDate, String skills) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.additionDate = additionDate;
+        this.interviewDate = interviewDate;
+        this.skills = skills;
+    }
 
     public Integer getId() {
         return id;

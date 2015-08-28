@@ -1,14 +1,4 @@
 body {
-    color: #fff;
-    background: url('../img/background.jpg') no-repeat fixed;
-    background-size: cover;
+    background-color: ghostwhite;
     font-size: 12pt;
-}
-
-table {
-    font-weight: 600;
-}
-
-th {
-    color: yellow;
 }

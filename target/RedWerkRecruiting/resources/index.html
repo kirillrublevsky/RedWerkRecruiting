@@ -9,27 +9,30 @@
     <script src="/resources/assets/js/vendor/jquery.min.js"></script>
     <script src="/resources/assets/js/vendor/bootstrap.min.js"></script>
     <script src="/resources/assets/js/vendor/angular.min.js"></script>
+    <script src="/resources/assets/js/vendor/angular-route.min.js"></script>
+    <script src="/resources/assets/js/vendor/ui-bootstrap.min.js"></script>
     <script src="/resources/assets/js/controllers.js"></script>
+    <script src="/resources/assets/js/app.js"></script>
 </head>
 <body>
-<div class="container-fluid">
-    <h1>RedWerk Recruiting home page</h1>
-    <table class="table table-bordered" ng-controller="CandidatesListCtrl">
-        <thead>
-            <tr>
-                <th class="col-md-4">Name</th>
-                <th class="col-md-4">Added</th>
-                <th class="col-md-4">Three best skills</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="candidate in candidates">
-                <td>{{candidate.firstName + " " + candidate.lastName}}</td>
-                <td>{{candidate.additionDate}}</td>
-                <td>{{candidate.skills}}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#/">RedWerk Recruiting</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#/">Home</a></li>
+                <li><a href="#/add">Add candidate</a></li>
+            </ul>
+            <form role="search" class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input ng-model="search" type="text" placeholder="Search" class="form-control">
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+<div ng-view></div>
 </body>
 </html>
